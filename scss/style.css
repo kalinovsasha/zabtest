@@ -1,0 +1,56 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #a2aeee;
+}
+
+.main_serversAvaleble {
+  margin: 0 auto;
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main_serversAvaleble_server {
+  margin-top: 15px;
+  height: 50px;
+  background-color: #8194fa;
+}
+
+.available {
+  display: inline;
+  font-weight: 600;
+  color: green;
+}
+
+.notavailable {
+  display: inline;
+  font-weight: 600;
+  color: #f71212;
+  -webkit-animation: blink2 2s linear infinite;
+  animation: blink2 1s linear infinite;
+}
+
+@-webkit-keyframes blink2 {
+  100% {
+    color: rgba(16, 224, 34, 0);
+  }
+  50% {
+    color: #f71212;
+  }
+}
+
+@keyframes blink2 {
+  100% {
+    color: rgba(6, 240, 17, 0);
+  }
+  50% {
+    color: #f71212;
+  }
+}
+/*# sourceMappingURL=style.css.map */
