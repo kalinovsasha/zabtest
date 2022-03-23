@@ -6,13 +6,15 @@ body{
 }
 .main_serversAvaleble{
     margin: 0 auto;
-    width: 33%;
+    width: 35%;
     display: flex;
     flex-direction: column;
 }
 .main_serversAvaleble_server{
     margin-top: 15px;
-    height: 50px;
+    height: 100%;
+    font-weight: 500;
+    font-size: 1.2em;
     background-color: $bgalert;
 }
 .available{
@@ -22,7 +24,7 @@ body{
 }
 .notavailable{
     display: inline;
-    font-weight: 600;
+    font-weight:800;
     color: rgb(247, 18, 18);
     -webkit-animation: blink2 2s linear infinite;
     animation: blink2 1s linear infinite;
