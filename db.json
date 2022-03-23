@@ -1,0 +1,23 @@
+{
+    "posts": [
+        {
+        "id": "0",
+        "name": "mikrotik",
+        "ip": "192.168.88.1",
+        "available": true
+        },
+        {
+        "id": "1",
+        "name": "mikrotik_2",
+        "ip": "192.168.88.2",
+        "available": false
+        },
+        {
+        "id": "2",
+        "name": "mikrotik_3",
+        "ip": "192.168.88.3",
+        "available": false
+        }
+    ]
+    
+  }
