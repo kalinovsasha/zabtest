@@ -1,4 +1,4 @@
-//servers получаем командой fetch 
+//servers Default (for test) 
 let servers  =[{
     id: "0",
     name: "mikrotik",
@@ -15,9 +15,17 @@ let servers  =[{
 
 
 
+//Get From Fake API
+const getServers =  function(render){
+    fetch("https://my-json-server.typicode.com/kalinovsasha/zabtest/posts")
+    .then(response => response.json())
+    .then(json => {
+        servers=json
+        render()
+    })
+}
 
-
-const render = async function(){
+const render = function(){
     let div = document.createElement('div');
     div.className = "main_serversAvaleble";
     div.innerHTML = ``;
@@ -29,14 +37,24 @@ const render = async function(){
         Name: ${servers[i].name}</br>  Ip: ${servers[i].ip}</br> Available: <div class="${availableStatus}">${servers[i].available}</div>
         </div>
         `;
+        //Send message to Telegramm
         if(!servers[i].available){
-            fetch(`https://api.telegram.org/bot5199031552:AAHDifowU2CazGRqRHT1KgobJYKRw_QBSGc/sendMessage?chat_id=-653206323&text=${servers[1].name} ip=${servers[1].ip} is not available`)
+            try {
+                fetch(`https://api.telegram.org/bot5199031552:AAHDifowU2CazGRqRHT1KgobJYKRw_QBSGc/sendMessage?chat_id=-653206323&text=${servers[1].name} ip=${servers[1].ip} is not available`)
+            } catch (error) {
+                console.log(error)
+            }
+            
         }
     }
     document.body.append(div)
 
 }
 
-render()
+//render()
+getServers(render)
+
+
+
 
 //fetch(`https://api.telegram.org/bot5199031552:AAHDifowU2CazGRqRHT1KgobJYKRw_QBSGc/sendMessage?chat_id=-653206323&text=${servers[1].name}`)
