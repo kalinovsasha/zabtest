@@ -40,7 +40,7 @@ const render = function(){
         //Send message to Telegramm
         if(!servers[i].available){
             try {
-                fetch(`https://api.telegram.org/bot5199031552:AAHDifowU2CazGRqRHT1KgobJYKRw_QBSGc/sendMessage?chat_id=-653206323&text=${servers[1].name} ip=${servers[1].ip} is not available`)
+                fetch(`https://api.telegram.org/bot5199031552:AAHDifowU2CazGRqRHT1KgobJYKRw_QBSGc/sendMessage?chat_id=-653206323&text=${servers[i].name} ip=${servers[i].ip} is not available`)
             } catch (error) {
                 console.log(error)
             }
